@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { ExpenseProvider, useExpense } from './context/ExpenseContext';
 import { Layout } from './components/Layout';
 import { SetupScreen } from './components/SetupScreen';
@@ -35,9 +35,9 @@ const AppRoutes: React.FC = () => {
 function App() {
   return (
     <ExpenseProvider>
-      <BrowserRouter>
+      <HashRouter>
         <AppRoutes />
-      </BrowserRouter>
+      </HashRouter>
     </ExpenseProvider>
   );
 }
